@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+
+    repositories {
+    	maven { url "http://maven.oschina.net/content/groups/public/" }
+       mavenCentral()
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.8.2'
+    }
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+	compileJava.dependsOn clean
+	sourceCompatibility = 1.7
+    version = '1.0'
+
+    jar {
+        manifest.attributes provider: 'joda-time-study'
+    }
+}
