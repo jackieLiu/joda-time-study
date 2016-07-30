@@ -43,7 +43,6 @@ public class DateTimeE3 {
 
     public void check(){
         MonthDay monthDay = new MonthDay(7,24);
-
         LocalDate localDate = new LocalDate();
         System.out.println(monthDay.isEqual(new MonthDay(localDate)));
     }
@@ -55,6 +54,10 @@ public class DateTimeE3 {
         System.out.println(period.getDays());
         System.out.println(period.getHours());
         System.out.println(period.getMonths());
+
+        DateTime df= new DateTime(2016,9,10,12,20);
+        DateTime start = df.plus(Period.days(2));
+        System.out.println(start.toString());
     }
 
     public void getDateTime(){
@@ -86,8 +89,8 @@ public class DateTimeE3 {
 //        dte3.com();
 //        dte3.change();
 //        dte3.check();
-//        dte3.periodTest();
+        dte3.periodTest();
 //        dte3.getDateTime();
-        dte3.changeTest2();
+//        dte3.changeTest2();
     }
 }
